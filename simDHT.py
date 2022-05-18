@@ -249,7 +249,7 @@ class Master(Thread):
 
     def downloadMetadata(self):
         # 100 threads for download metadata
-        for i in xrange(0, 100):
+        for _ in xrange(0, 100):
             if self.queue.qsize() == 0:
                 sleep(1)
                 continue
